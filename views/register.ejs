@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Styles/main.css">
+</head>
+<body>
+<div>
+<h1>REGISTER TO WORLD TOUR CANVAS</h1>
+</div>
+
+<div class="bg-white w-30 center">
+<form action="/register" method="POST">
+  <div class="form-group">
+    <label for="exampleInputName1"><b>Name</b></label>
+    <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter your name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Email address</b></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><b>Password</b></label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<h2><%= error %></h2>
+</div>
+<a class="btn btn-dark btn-lg" href="/" role="button">Home</a>
+</body>
+</html>
