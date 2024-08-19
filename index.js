@@ -131,12 +131,12 @@ app.post("/register", async (req, res) => {
   
     try{
     const result = await db.query("SELECT * FROM customers WHERE email = $1",[email]);
-    const perid = result.rows[0].id;
-    const pla = await checkvisitedcountries(perid);
     if(result.rows.length > 0)
       {
           const storedpass = result.rows[0].password;
           const storedname = result.rows[0].name;
+          const perid = result.rows[0].id;
+          const pla = await checkvisitedcountries(perid);
           if(storedpass == pass)
           {
             res.render("index.ejs",{vistedcountry:pla,total: pla.length,nameofuser:storedname,uid:perid});
